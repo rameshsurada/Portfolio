@@ -1,10 +1,15 @@
 import img from "./imgg.jpeg";
-import project1 from "./project1.jpg"
+import calc from "./calc.jpg"
+import appoint from "./appoint.jpg"
+import removebg from "./removebg.jpg"
 
 
 
 const assets = {
-  img,project1
+  img,calc,appoint,removebg
 };
 
 export default assets;
+
+
+

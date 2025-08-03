@@ -2,6 +2,7 @@ import React from "react";
 import Navbar from "../components/Navbar";
 import Hero from "../components/Hero";
 import TechStack from "../components/Techstack";
+import Projects from "../components/Projects";
 
 const Home = () => {
   return (
@@ -10,6 +11,7 @@ const Home = () => {
       <Navbar />
       <Hero />
       <TechStack />
+      <Projects />
     </div>
   );
 };

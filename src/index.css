@@ -3,3 +3,9 @@
 body {
     background-color: black;
 }
+/* tailwind.css or index.css */
+@layer components {
+  .stack-btn {
+    @apply flex items-center gap-2 px-3 py-1 text-sm text-white bg-black border border-gray-800 rounded-xl;
+  }
+}
