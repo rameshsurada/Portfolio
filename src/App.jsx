@@ -11,14 +11,11 @@ import Home from "./pages/Home";
 
 export default function App() {
   return (
-    <div className="font-sans bg-black text-gray-800">
+    <div className=" bg-black text-gray-800">
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/skills" element={<Skills />} />
-        <Route path="/projects" element={<Projects />} />
+
         <Route path="/experience" element={<Experience />} />
-        <Route path="/education" element={<Education />} />
-        <Route path="/contact" element={<About />} />
       </Routes>
     </div>
   );

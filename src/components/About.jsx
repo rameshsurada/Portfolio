@@ -3,16 +3,15 @@ import ImageStack from "./ImageStack"; // Adjust path if needed
 
 export default function About() {
   return (
-    <section className="bg-black text-white py-16 px-6 md:px-20 font-sans min-h-[450px]">
+    <section className="bg-black text-white py-16 px-6 md:px-20 font-sans min-h-[450px] mt-15">
       <div className="max-w-6xl mx-auto flex flex-col">
         {/* Title Section */}
         <div className="mb-8 max-w-xl">
           <h2 className="text-sm uppercase tracking-widest text-gray-400 mb-2">
             More about me
           </h2>
-          <h1 className="text-4xl sm:text-5xl font-semibold">
-            I'm Ramesh,{" "}
-            <span className="cedarville-cursive-regular"> a full stack </span>
+          <h1 className="text-4xl sm:text-5xl font-bold ">
+            I'm Ramesh, a full stack
             <span className="cedarville-cursive-regular text-transparent bg-clip-text bg-gradient-to-r from-pink-500 via-orange-400 to-yellow-400">
               developer
             </span>

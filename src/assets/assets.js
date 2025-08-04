@@ -10,12 +10,13 @@ import solve from "./solve.png"
 import code from "./code.png"
 import doubleUnderline from "./doubleUnderline.png"
 import longUnderline from "./longUnderline.png"
+import myResume from "./myResume.pdf"
 
 
 
 
 const assets = {
-  img,calc,appoint,removebg,cscLogo,datavalleyLogo,gym,read,solve,code,doubleUnderline,longUnderline
+  img,calc,appoint,removebg,cscLogo,datavalleyLogo,gym,read,solve,code,doubleUnderline,longUnderline,myResume
 };
 
 export default assets;

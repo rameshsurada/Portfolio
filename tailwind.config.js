@@ -9,6 +9,15 @@ export default {
         outfit: ['"Outfit"', 'sans-serif'],
         raleway: ['"Raleway"', 'sans-serif'],
       },
+      keyframes: {
+        spinSlow: {
+          '0%': { transform: 'rotate(0deg)' },
+          '100%': { transform: 'rotate(-360deg)' },
+        },
+      },
+      animation: {
+        rotate: 'spinSlow 10s linear infinite',
+      },
     },
   },
   plugins: [],

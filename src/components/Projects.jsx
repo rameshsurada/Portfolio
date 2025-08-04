@@ -10,7 +10,7 @@ import { SiExpress, SiMongodb, SiClerk } from "react-icons/si";
 
 const Projects = () => {
   return (
-    <>
+    <div className="pt-1">
       <h2 className="relative z-[2] mt-40 text-4xl font-medium tracking-tight text-center text-balance break-words sm:text-5xl md:mb-5 md:text-6xl">
         <p className="mb-3 text-xs text-gray-300 font-normal tracking-widest text-blue-50 uppercase md:text-sm">
           FEATURED CASE STUDIES
@@ -39,7 +39,6 @@ const Projects = () => {
                 "linear-gradient(90deg, rgba(0,0,0,0) 5%, rgba(255,255,255,0.8) 35%, rgb(255,255,255) 50%, rgba(255,255,255,0.8) 65%, rgba(0,0,0,0) 95%)"
             }}
           />
-
           <div className="relative w-full h-full overflow-hidden rounded-2xl bg-blue-600">
             <div className="group relative flex flex-col items-center justify-between overflow-hidden rounded-xl lg:rounded-2xl dark:bg-gradient-to-b from-black/40 to-transparent transition-all duration-300">
               <div
@@ -76,7 +75,7 @@ const Projects = () => {
                 style={{ color: "transparent" }}
               />
             </div>
-          </div>
+          </div>{" "}
         </a>
 
         {/* Right Side - Project Content */}
@@ -411,7 +410,7 @@ const Projects = () => {
           </div>
         </div>
       </section>
-    </>
+    </div>
   );
 };
 
