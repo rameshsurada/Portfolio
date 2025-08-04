@@ -72,7 +72,7 @@ const Projects = () => {
                 width={700}
                 height={450}
                 decoding="async"
-                className="lg:group-hover:translate-y-10 w-full max-w-full sm:max-w-[85%] translate-y-5 -rotate-3 rounded-t-lg border-[1.5px] border-white/20 transition-all duration-300 will-change-transform lg:block lg:rotate-0 lg:group-hover:scale-[1.08] lg:group-hover:-rotate-3 shadow-[0_0_30px_#60A5FA]"
+                className="lg:group-hover:translate-y-10 w-full max-w-full sm:max-w-[85%] translate-y-5 -rotate-3 rounded-t-lg border-[1.5px] border-white/20 transition-all duration-300 will-change-transform lg:block lg:rotate-0 lg:group-hover:scale-[1.08] lg:group-hover:-rotate-3 shadow-[0_0_30px_#1D4ED8]"
                 style={{ color: "transparent" }}
               />
             </div>

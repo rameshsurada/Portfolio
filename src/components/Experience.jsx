@@ -1,7 +1,11 @@
 import React from "react";
 import StarfieldCanvas from "./StarfieldCanvas";
 
-// Import icons from react-icons
+// Logo images
+import cscLogo from "../assets/cscLogo.png";
+import datavalleyLogo from "../assets/datavalleyLogo.png";
+
+// Icons
 import { FaReact, FaNodeJs, FaJs, FaHtml5, FaCss3Alt } from "react-icons/fa";
 import {
   SiMongodb,
@@ -10,6 +14,7 @@ import {
   SiBootstrap
 } from "react-icons/si";
 
+// Skill icon mapping
 const skillIcons = {
   React: <FaReact className="text-cyan-400" />,
   "Node.js": <FaNodeJs className="text-green-600" />,
@@ -22,10 +27,12 @@ const skillIcons = {
   Bootstrap: <SiBootstrap className="text-purple-600" />
 };
 
+// Internship data
 const internships = [
   {
-    role: "MERN Stack Developer",
+    role: "MERN Stack Developer - Intern",
     company: "Council for Skills and Competencies (CSC India)",
+    logo: cscLogo,
     duration: "Dec 2024 - Apr 2025 · 5 mos",
     location: "Vishakhapatnam, Andhra Pradesh, India · Remote",
     description: [
@@ -40,6 +47,7 @@ const internships = [
   {
     role: "Web Development Intern",
     company: "Datavalley Inc",
+    logo: datavalleyLogo,
     duration: "May 2024 - Jun 2024 · 2 mos",
     location: "Vijayawada, Andhra Pradesh, India · Remote",
     description: [
@@ -79,34 +87,47 @@ const Experience = () => {
 
       {/* Content */}
       <div className="relative z-10 max-w-5xl mx-auto text-white">
-        <h2 className="text-4xl font-bold mb-10 text-blue-50">
+        <h2 className="text-4xl font-bold mb-10 text-blue-50 text-center">
           Internship Experience
         </h2>
 
         {internships.map((internship, idx) => (
           <div
             key={idx}
-            className="mb-12 border border-gray-700 rounded-lg p-6 bg-[#111111] shadow-lg shadow-blue-100/40"
+            className="mb-12 border border-gray-700 rounded-xl p-6 bg-[#111111] shadow-lg shadow-blue-100/30"
           >
-            <h3 className="text-2xl font-semibold text-blue-200">
+            <h3 className="text-2xl font-semibold text-blue-100">
               {internship.role}
             </h3>
-            <p className="text-gray-400 italic mt-1">{internship.company}</p>
-            <p className="text-gray-500 mt-1">
-              {internship.duration} · {internship.location}
-            </p>
 
-            <ul className="mt-4 list-disc list-inside text-gray-300 space-y-2">
+            {/* Company Logo and Info */}
+            <div className="flex items-center gap-4 mt-3">
+              <img
+                src={internship.logo}
+                alt={internship.company}
+                className="w-12 h-12 rounded-full border border-white/20 object-contain"
+              />
+              <div>
+                <p className="text-gray-400 italic">{internship.company}</p>
+                <p className="text-gray-500 text-sm">
+                  {internship.duration} · {internship.location}
+                </p>
+              </div>
+            </div>
+
+            {/* Description */}
+            <ul className="mt-4 list-disc list-inside text-gray-300 space-y-2 text-sm sm:text-base">
               {internship.description.map((desc, i) => (
                 <li key={i}>{desc}</li>
               ))}
             </ul>
 
-            <div className="mt-4 flex flex-wrap gap-3">
+            {/* Skills */}
+            <div className="mt-5 flex flex-wrap gap-4">
               {internship.skills.map((skill, i) => (
                 <span
                   key={i}
-                  className="stack-btn flex items-center gap-4 px-5 py-2 rounded-full text-xs font-medium  transition cursor-default select-none"
+                  className="stack-btn flex items-center gap-3 px-5 py-2 text-sm font-medium border border-white/10 rounded-full bg-white/5 backdrop-blur-sm"
                 >
                   {skillIcons[skill] || null}
                   {skill}
