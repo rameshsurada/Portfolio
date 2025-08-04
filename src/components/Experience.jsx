@@ -13,6 +13,7 @@ import {
   SiTailwindcss,
   SiBootstrap
 } from "react-icons/si";
+import Navbar from "./Navbar";
 
 // Skill icon mapping
 const skillIcons = {
@@ -62,82 +63,85 @@ const internships = [
 
 const Experience = () => {
   return (
-    <div
-      style={{
-        position: "relative",
-        width: "100vw",
-        minHeight: "100vh",
-        overflow: "hidden",
-        backgroundColor: "black",
-        padding: "3rem 1rem"
-      }}
-    >
-      {/* Starfield background */}
-      <StarfieldCanvas
+    <>
+      <Navbar />
+      <div
         style={{
-          position: "absolute",
-          top: 0,
-          left: 0,
-          width: "100%",
-          height: "100%",
-          pointerEvents: "none",
-          zIndex: 0
+          position: "relative",
+          width: "100vw",
+          minHeight: "100vh",
+          overflow: "hidden",
+          backgroundColor: "black",
+          padding: "3rem 1rem"
         }}
-      />
+      >
+        {/* Starfield background */}
+        <StarfieldCanvas
+          style={{
+            position: "absolute",
+            top: 0,
+            left: 0,
+            width: "100%",
+            height: "100%",
+            pointerEvents: "none",
+            zIndex: 0
+          }}
+        />
 
-      {/* Content */}
-      <div className="relative z-10 max-w-5xl mx-auto text-white">
-        <h2 className="text-4xl font-bold mb-10 text-blue-50 text-center">
-          Internship Experience
-        </h2>
+        {/* Content */}
+        <div className="relative z-10 max-w-5xl mx-auto text-white">
+          <h2 className="text-4xl font-bold mt-15 mb-10 text-blue-50 text-center">
+            Internship Experience
+          </h2>
 
-        {internships.map((internship, idx) => (
-          <div
-            key={idx}
-            className="mb-12 border border-gray-700 rounded-xl p-6 bg-[#111111] shadow-lg shadow-blue-100/30"
-          >
-            <h3 className="text-2xl font-semibold text-blue-100">
-              {internship.role}
-            </h3>
+          {internships.map((internship, idx) => (
+            <div
+              key={idx}
+              className="mb-12 border border-gray-700 rounded-xl p-6 bg-[#111111] shadow-lg shadow-blue-100/30"
+            >
+              <h3 className="text-2xl font-semibold text-blue-100">
+                {internship.role}
+              </h3>
 
-            {/* Company Logo and Info */}
-            <div className="flex items-center gap-4 mt-3">
-              <img
-                src={internship.logo}
-                alt={internship.company}
-                className="w-12 h-12 rounded-full border border-white/20 object-contain"
-              />
-              <div>
-                <p className="text-gray-400 italic">{internship.company}</p>
-                <p className="text-gray-500 text-sm">
-                  {internship.duration} · {internship.location}
-                </p>
+              {/* Company Logo and Info */}
+              <div className="flex items-center gap-4 mt-3">
+                <img
+                  src={internship.logo}
+                  alt={internship.company}
+                  className="w-12 h-12 rounded-full border border-white/20 object-contain"
+                />
+                <div>
+                  <p className="text-gray-400 italic">{internship.company}</p>
+                  <p className="text-gray-500 text-sm">
+                    {internship.duration} · {internship.location}
+                  </p>
+                </div>
+              </div>
+
+              {/* Description */}
+              <ul className="mt-4 list-disc list-inside text-gray-300 space-y-2 text-sm sm:text-base">
+                {internship.description.map((desc, i) => (
+                  <li key={i}>{desc}</li>
+                ))}
+              </ul>
+
+              {/* Skills */}
+              <div className="mt-5 flex flex-wrap gap-4">
+                {internship.skills.map((skill, i) => (
+                  <span
+                    key={i}
+                    className="stack-btn flex items-center gap-3 px-5 py-2 text-sm font-medium border border-white/10 rounded-full bg-white/5 backdrop-blur-sm"
+                  >
+                    {skillIcons[skill] || null}
+                    {skill}
+                  </span>
+                ))}
               </div>
             </div>
-
-            {/* Description */}
-            <ul className="mt-4 list-disc list-inside text-gray-300 space-y-2 text-sm sm:text-base">
-              {internship.description.map((desc, i) => (
-                <li key={i}>{desc}</li>
-              ))}
-            </ul>
-
-            {/* Skills */}
-            <div className="mt-5 flex flex-wrap gap-4">
-              {internship.skills.map((skill, i) => (
-                <span
-                  key={i}
-                  className="stack-btn flex items-center gap-3 px-5 py-2 text-sm font-medium border border-white/10 rounded-full bg-white/5 backdrop-blur-sm"
-                >
-                  {skillIcons[skill] || null}
-                  {skill}
-                </span>
-              ))}
-            </div>
-          </div>
-        ))}
+          ))}
+        </div>
       </div>
-    </div>
+    </>
   );
 };
 

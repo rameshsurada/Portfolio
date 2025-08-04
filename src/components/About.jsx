@@ -10,10 +10,11 @@ export default function About() {
           <h2 className="text-sm uppercase tracking-widest text-gray-400 mb-2">
             More about me
           </h2>
-          <h1 className="text-4xl sm:text-5xl font-bold">
-            I'm Ramesh, a creative{" "}
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-pink-500 via-orange-400 to-yellow-400">
-              engineer
+          <h1 className="text-4xl sm:text-5xl font-semibold">
+            I'm Ramesh,{" "}
+            <span className="cedarville-cursive-regular"> a full stack </span>
+            <span className="cedarville-cursive-regular text-transparent bg-clip-text bg-gradient-to-r from-pink-500 via-orange-400 to-yellow-400">
+              developer
             </span>
           </h1>
         </div>
@@ -39,8 +40,8 @@ export default function About() {
             </p>
           </div>
 
-          {/* Image Stack Container with fixed width */}
-          <div className="flex-shrink-0 w-[100px] md:w-[220px]">
+          {/* Image Stack Container */}
+          <div className="flex-shrink-0 w-[100px] md:w-[220px] mx-auto md:mx-0 mt-12 md:mt-0">
             <ImageStack />
           </div>
         </div>

@@ -45,7 +45,7 @@ const tools = [
 export default function TechStack() {
   return (
     <section className="bg-black text-white py-12 px-6 max-w-7xl mx-auto  shadow-xl">
-      <h2 className="text-4xl font-bold text-center text-teal-400 mb-12">
+      <h2 className="text-4xl font-semibold text-center text-blue-200 mb-12">
         Tech Stack & Tools
       </h2>
 

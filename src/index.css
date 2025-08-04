@@ -1,11 +1,61 @@
 @import "tailwindcss";
 
+@import url('https://fonts.googleapis.com/css2?family=Edu+NSW+ACT+Cursive:wght@400..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Edu+NSW+ACT+Cursive:wght@400..700&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Outfit:wght@100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100;200;300;400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cedarville+Cursive&display=swap');
+
+
+
 body {
     background-color: black;
+     @apply font-sans;
 }
 /* tailwind.css or index.css */
 @layer components {
   .stack-btn {
     @apply flex items-center gap-2 px-3 py-1 text-sm text-white bg-black border border-gray-800 rounded-xl;
   }
+}
+
+/* Wavy underline for emphasis */
+.highlight-wavy {
+  text-decoration: underline wavy #facc15; /* Tailwind's yellow-400 */
+  text-underline-offset: 4px;
+}
+
+/* Solid underline (like hand-drawn) for Full Stack */
+.highlight-underline {
+  position: relative;
+}
+
+.highlight-underline::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 2px;
+  width: 100%;
+  height: 4px;
+  background-color: #8b5cf6; /* Tailwind's purple-500 */
+  border-radius: 9999px;
+  z-index: -1;
+}
+/* in index.css */
+.edu-cursive {
+  font-family: 'Edu NSW ACT Cursive', cursive;
+}
+
+.montserrat-font {
+  font-family: "Montserrat", sans-serif;
+  
+}
+
+.outfit-font {
+  font-family: 'Outfit', sans-serif;
+}
+.cedarville-cursive-regular {
+  font-family: "Cedarville Cursive", cursive;
+  font-weight: 400;
+  font-style: normal;
 }

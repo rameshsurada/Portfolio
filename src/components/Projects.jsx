@@ -12,13 +12,13 @@ const Projects = () => {
   return (
     <>
       <h2 className="relative z-[2] mt-40 text-4xl font-medium tracking-tight text-center text-balance break-words sm:text-5xl md:mb-5 md:text-6xl">
-        <p className="mb-3 text-xs font-normal tracking-widest text-blue-50 uppercase md:text-sm">
+        <p className="mb-3 text-xs text-gray-300 font-normal tracking-widest text-blue-50 uppercase md:text-sm">
           FEATURED CASE STUDIES
         </p>
 
         <span>
-          <span className="text-blue-50">Curated </span>
-          <span className="text-transparent bg-clip-text bg-gradient-to-r from-pink-500 via-yellow-500 to-green-500 animate-gradient-x font-nyght tracking-wide">
+          <span className="text-blue-50 outfit-font">Curated </span>
+          <span className="text-transparent edu-cursive bg-clip-text bg-gradient-to-r from-pink-500 via-yellow-500 to-green-500 animate-gradient-x font-nyght tracking-wide">
             work
           </span>
         </span>
@@ -81,7 +81,9 @@ const Projects = () => {
 
         {/* Right Side - Project Content */}
         <div className="w-full md:w-1/2 space-y-6">
-          <h2 className="text-3xl font-bold text-blue-300">RemoveBG</h2>
+          <h2 className="text-3xl font-semibold outfit-font text-blue-300">
+            RemoveBG
+          </h2>
 
           <p className="text-gray-300">
             RemoveBG is a full-stack AI SaaS web app that allows users to remove
