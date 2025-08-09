@@ -19,7 +19,7 @@ const Hero = () => {
 
         {/* Subtitle */}
         <div className="flex flex-col items-start  sm:mx-30 w-full px-4 md:px-0 ">
-          <h1 className="text-xl z-3 sm:text-2xl md:text-4xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-pink-700 to-yellow-400 font-semibold text-center">
+          <h1 className="text-xl z-3 sm:text-2xl md:text-5xl font-black text-transparent bg-clip-text bg-gradient-to-r from-pink-700 to-yellow-400  text-center">
             Turning Complex Ideas Into Functional Code
           </h1>
           <p className="relative z-10 mt-5 max-w-5xl text-sm text-gray-300 sm:text-base md:text-lg  ">
@@ -38,10 +38,9 @@ const Hero = () => {
                 className="absolute left-0 bottom-0 w-full h-auto pointer-events-none"
               />
             </span>
-            I’m not only skilled at building scalable applications but also
-            excel at solving complex problems efficiently. From backend
-            architecture to frontend design, I create solutions that perform and
-            deliver real value.
+            I build scalable applications and solve complex problems with
+            efficiency and clarity. From backend architecture to frontend
+            design, I create solutions that perform and deliver real value.
           </p>
           <div className="relative z-10 mt-5 flex justify-center">
             <a
